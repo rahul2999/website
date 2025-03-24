@@ -46,6 +46,7 @@
             }
         #intro {
             display: flex;
+            padding-top: 20px;
         }
         #gif {
             filter: invert();
@@ -70,7 +71,7 @@
             align-items: center;
             width: 35%;
             margin: 5px 5px;
-            font-size: 1.2em;
+            font-size: 1.3em;
             padding-left: 35px; /* Space for custom bullet */
             position: relative;
         }
@@ -86,7 +87,9 @@
 
         /* experience section */
         #experience {
-            margin: 50px 0;
+            margin: 0px 0;
+            justify-content: space-between; /* Space between the two sections */
+            gap: 30px;
         }
         .divider {
             width: 80px;
@@ -121,11 +124,11 @@
             padding-bottom: 0;
         }
         .duration {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #777;
         }
         .technologies {
-            font-size: 0.8em;
+            font-size: 1em;
             color: #555;
         }
         ul {
@@ -133,7 +136,7 @@
             padding-left: 0;
         }
         ul li {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #333;
             margin-bottom: 5px;
         }
@@ -144,16 +147,9 @@
             color: #1a73e8;
         }
 
-        /* other section */
-        #other {
-            margin: 50px 0;
-            color: #333;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between; /* Space between the two sections */
-            gap: 30px;
-        }
-        .certifications, .conferences {
+        /* certification and conference section */
+        #certification ul, #conference ul {
+            font-size: 1.1em;
             padding: 20px;
             border-radius: 8px;
             background: #f4f7fa;
@@ -163,7 +159,7 @@
        
          /* recruiter section */
         #recruiter {
-            padding-top: 10px;
+            padding-top: 20px;
             font-size: 1em;
         }
 
@@ -171,7 +167,7 @@
         #footer {
             color: #09185a;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 30px;
             font-size: 1em;
             position: relative;
             width: 100%;
@@ -183,6 +179,7 @@
             color: #09185a;
             font-weight: bold;
             text-transform: uppercase;
+            padding-top: 20px;
             margin-bottom: 10px;
         }
         p {
@@ -215,11 +212,8 @@
                 object-fit: scale-down;
             }
             .experience-item {
-                min-width: 100%; /* Ensure it takes up the full width */
-                margin-bottom: 20px; /* Add space between the experience items */
-            }
-            #other {
                 flex-direction: column; /* Stack the sections on smaller screens */
+                min-width: 200px;
             }
         }
     </style>
@@ -261,7 +255,7 @@
             </p>
             <p> Here are some technologies I have been working with:
                 <ul id="tech-stack">
-                    <li>Java (Spring boot)</li>
+                    <li>Java</li>
                     <li>Python</li>
                     <li>AWS</li>
                     <li>PostgreSQL</li>
@@ -303,7 +297,7 @@
               <div class="experience-item">
                 <p class="role">Software Engineer @ Verint</p>
                 <p class="duration">Jul 2019 - Jun 2020 | Remote/Waterlooville</p>
-                <p class="technologies">Industrial Placement | Tools: C#, Angular, MongoDB, Bash, PowerShell, Jenkins, Groovy</p>
+                <p class="technologies">Industrial Placement <br> Technologies: C#, Angular, MongoDB, Bash, PowerShell, Jenkins, Groovy</p>
                 <ul>
                   <li>Delivered new features and resolved bugs for Verint Automated Verification, optimizing UI for streamlined policy data views.</li>
                   <li>Built and optimized CI/CD pipelines for multiple projects within the firm.</li>
@@ -311,39 +305,36 @@
                 </ul>
               </div>
             </div>
-          </div>
+        </div>
 
-        
-          <h2>/ other</h2>
-          <hr class="divider">
-          <div id="other">
-            <div class="certifications">
-                <h2>/ certifications</h2>
-                <hr class="divider">
-                <ul>
-                    <li>AWS Developer Associate</li>
-                    <li>AWS Solutions Architect Associate</li>
-                    <li>AWS Cloud Practitioner</li>
-                    <li>Certified Kubernetes Application Developer</li>
-                    <li>Certified Kubernetes Administrator</li>
-                    <li>Terraform Associate</li>
-                    <li>Microsoft Azure Fundamentals</li>
-                    <li>Bloomberg Market Concepts</li>
-                </ul>
-            </div>
-            <div class="conferences">
-                <h2>/ conferences</h2>
-                <hr class="divider">
-                <ul>
-                    <li>KubeCon London 2025</li>
-                    <li>Temporal London 2025</li>
-                    <li>AWS Cloud Practitioner</li>
-                    <li>AWS re:Invent Las Vegas 2024</li>
-                    <li>AWS Summit London 2023</li>
-                    <li>Bright Network Technology Experience 2021</li>
-                    <li>ffconf Brighton 2018</li>
-                </ul>
-            </div>
+
+        <div id="certification">
+            <h2>/ certifications</h2>
+            <hr class="divider">
+            <ul>
+                <li>AWS Developer Associate</li>
+                <li>AWS Solutions Architect Associate</li>
+                <li>AWS Cloud Practitioner</li>
+                <li>Certified Kubernetes Application Developer</li>
+                <li>Certified Kubernetes Administrator</li>
+                <li>Terraform Associate</li>
+                <li>Microsoft Azure Fundamentals</li>
+                <li>Bloomberg Market Concepts</li>
+            </ul>
+        </div>
+
+        <div id="conference">
+            <h2>/ conferences</h2>
+            <hr class="divider">
+            <ul>
+                <li>KubeCon London 2025</li>
+                <li>Temporal London 2025</li>
+                <li>AWS Cloud Practitioner</li>
+                <li>AWS re:Invent Las Vegas 2024</li>
+                <li>AWS Summit London 2023</li>
+                <li>Bright Network 2021</li>
+                <li>ffconf Brighton 2018</li>
+            </ul>
         </div>
 
         <p id="recruiter">
