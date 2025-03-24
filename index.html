@@ -144,6 +144,23 @@
             color: #1a73e8;
         }
 
+        /* other section */
+        #other {
+            margin: 50px 0;
+            color: #333;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between; /* Space between the two sections */
+            gap: 30px;
+        }
+        .certifications, .conferences {
+            padding: 20px;
+            border-radius: 8px;
+            background: #f4f7fa;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            flex: 1; /* Ensures equal width for both sections */
+        }
+       
          /* recruiter section */
         #recruiter {
             padding-top: 10px;
@@ -196,6 +213,9 @@
                 width: 100%;
                 height: auto;
                 object-fit: scale-down;
+            }
+            #other {
+                flex-direction: column; /* Stack the sections on smaller screens */
             }
         }
     </style>
@@ -288,6 +308,36 @@
               </div>
             </div>
           </div>
+
+          <div id="other">
+            <div class="certifications">
+                <h2>/ certifications</h2>
+                <hr class="divider">
+                <ul>
+                    <li>AWS Developer Associate</li>
+                    <li>AWS Solutions Architect Associate</li>
+                    <li>AWS Cloud Practitioner</li>
+                    <li>Certified Kubernetes Application Developer</li>
+                    <li>Certified Kubernetes Administrator</li>
+                    <li>Terraform Associate</li>
+                    <li>Microsoft Azure Fundamentals</li>
+                    <li>Bloomberg Market Concepts</li>
+                </ul>
+            </div>
+            <div class="conferences">
+                <h2>/ conferences</h2>
+                <hr class="divider">
+                <ul>
+                    <li>KubeCon London 2025</li>
+                    <li>Temporal London 2025</li>
+                    <li>AWS Cloud Practitioner</li>
+                    <li>AWS re:Invent Las Vegas 2024</li>
+                    <li>AWS Summit London 2023</li>
+                    <li>Bright Network Technology Experience 2021</li>
+                    <li>ffconf Brighton 2018</li>
+                </ul>
+            </div>
+        </div>
 
         <p id="recruiter">
           If you're a recruiter looking to get in touch, 
