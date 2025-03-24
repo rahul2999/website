@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport", initial-scale=1">
+    <title>Rahul</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: calc(10px + 0.33vw);
+            padding: 5vh 10vw;
+            color: #09185ab1;
+        }
+        #container {
+            align-content: center;
+        }
+
+        /* top right corner icon links bar */
+        #link-icons {
+            float: right;
+        }
+
+        /* intro section */
+        h1 {
+            font-size: 4.5em;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: #09185a;
+        }
+        #rahul {
+            font-weight: 600;
+            color: #1a73e8c9;
+        }
+        #connect-with-me {
+            font-size: 1.5em;
+            padding: 10px 10px;
+            border: 2px solid #001f3f; /* Dark navy outline */
+            background: transparent;
+            color: #001f3f; /* Dark navy text */
+            cursor: pointer;
+            border-radius: 5px; /* Optional: Rounded corners */
+            transition: all 0.3s ease;
+            text-decoration: none;
+            }
+        #intro {
+            display: flex;
+        }
+        #gif {
+            filter: invert();
+            width: 80%;
+            height: auto;
+            object-fit: none;
+        }
+
+        /* about section */
+        #about {
+            margin: 0px 0;
+        }
+        #tech-stack {
+            display: flex;
+            flex-wrap: wrap; /* Allows the items to wrap to the next line */
+            list-style-type: none; /* Removes default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+        #tech-stack li {
+            display: flex;
+            align-items: center;
+            width: 35%;
+            margin: 5px 5px;
+            font-size: 1.2em;
+            padding-left: 35px; /* Space for custom bullet */
+            position: relative;
+        }
+        #tech-stack li:before {
+            content: '🚀'; /* Change to a custom symbol (can be any emoji or character) */
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            color: #ff6347; /* Cool color like tomato red */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* experience section */
+        #experience {
+            margin: 50px 0;
+        }
+        .divider {
+            width: 80px;
+            border: 2px solid #1a73e8;
+            margin-bottom: 40px;
+            margin-left: 0;
+            border-radius: 10px;
+        }
+        #experience-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        .experience-item {
+            flex: 1;
+            min-width: 300px;
+            background: #f4f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .role {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            padding-bottom: 0;
+        }
+        .duration {
+            font-size: 1em;
+            color: #777;
+        }
+        .technologies {
+            font-size: 0.8em;
+            color: #555;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        ul li::before {
+            content: '🔹';
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #1a73e8;
+        }
+
+         /* recruiter section */
+        #recruiter {
+            padding-top: 10px;
+            font-size: 1em;
+        }
+
+        /* footer section */
+        #footer {
+            color: #09185a;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 1em;
+            position: relative;
+            width: 100%;
+        }
+
+        /* general style */
+        h2 {
+            font-size: 2.2em;
+            color: #09185a;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.6em;
+            font-weight: 300;
+            line-height: 1.4;
+            max-width: 50em;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .links {
+            text-decoration: none;
+            color: #121314;
+            background-color: rgba(0,169,251,0.2);
+        }
+        
+        /* style based on screen sizes*/
+        @media (max-width: 900px){
+            #container {
+                flex-wrap: wrap-reverse;
+            }
+            #intro {
+                display: block;
+                width: 100%;
+            }
+            #gif {
+                filter: invert();
+                width: 100%;
+                height: auto;
+                object-fit: scale-down;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div id="link-icons">
+            <a href="https://www.linkedin.com/in/1rv" target="_blank">
+                <img src="LI-In-Bug.png" alt="LinkedIn" height="25" width="30">
+            </a>
+            <a href="https://www.github.com/rahul2999" target="_blank">
+                <img src="github-mark.png" alt="Github" height="27" width="27">
+            </a>
+        </div>
+
+        <div id="intro">
+            <div id="intro-content">
+                <h1> hi, <span id="rahul">rahul</span> here. </h1>
+                <p style="font-weight:500; font-size:2.2em">
+                    I create stuff sometimes.
+                </p>
+                <p>
+                    I am a Software Engineer at from London, United Kingdom. 
+                    I'm passionate about building large-scale, high-impact products and have played a key role in launching major features for industry-leading services.
+                </p>
+                
+            </div>
+            <img id="gif" src="random.gif" alt="gif">   
+        </div>
+
+        <div id="about">
+            <h2>/ about me</h2> 
+            <hr class="divider">
+            <p>
+                I am currently a Software Engineer at
+                <a class="links" href='https://www.jpmorgan.com/global' target="_blank">J.P. Morgan</a>, working in the 
+                <a class="links" href='https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/checkout' target="_blank">Checkout</a> team. 
+                At the same time, I am undertaking a Master of Science in Digital and Technology Solutions at the University of Exeter. 
+            </p>
+            <p> Here are some technologies I have been working with:
+                <ul id="tech-stack">
+                    <li>Java (Spring boot)</li>
+                    <li>Python</li>
+                    <li>AWS</li>
+                    <li>PostgreSQL</li>
+                    <li>Kubernetes</li>
+                    <li>Docker</li>
+                </ul>
+            </p>
+            <p>
+                Outside of work, I'm passionate about staying up-to-date with the latest technological advancements. 
+                <br> I enjoy watching anime and love exploring new places through travel.
+            </p>
+        </div>
+
+        <div id="experience">
+            <h2>/ experience</h2> 
+            <hr class="divider">
+            <div id="experience-content">
+              <div class="experience-item">
+                <p class="role">Software Engineer @ J.P. Morgan</p>
+                <p class="duration">Sept 2022 - Present | London</p>
+                <p class="technologies">Technologies: Java, Spring Boot, gRPC, Gradle, PostgreSQL, AWS, Docker, Kubernetes, DataDog</p>
+                <ul>
+                  <li>Spearheaded the development of a new merchant checkout solution leveraging Java and AWS in a fast-paced environment.</li>
+                  <li>Designed comprehensive architecture diagrams, mapping the end-to-end system flow for the checkout solution.</li>
+                  <li>Collaborated with internal and external stakeholders, including payment method integration teams (PBB).</li>
+                  <li>Engineered and maintained multiple APIs, contributing to an international team spanning the UK and US.</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <p class="role">Software Engineer @ J.P. Morgan</p>
+                <p class="duration">Jul 2021 - Aug 2022 | Bournemouth</p>
+                <p class="technologies">Technologies: Java, Spring Boot, Maven, Git, Splunk, OracleDB</p>
+                <ul>
+                  <li>Enhanced and maintained features for a critical internal reference data settlement engine managing millions of records.</li>
+                  <li>Designed and implemented a Grafana Dashboard to visualize app metrics, providing actionable insights for leadership.</li>
+                  <li>Developed Proof of Concepts (POCs) for log aggregation in Splunk, reducing production issue investigation time by 25%.</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <p class="role">Software Engineer @ Verint</p>
+                <p class="duration">Jul 2019 - Jun 2020 | Remote/Waterlooville</p>
+                <p class="technologies">Industrial Placement | Tools: C#, Angular, MongoDB, Bash, PowerShell, Jenkins, Groovy</p>
+                <ul>
+                  <li>Delivered new features and resolved bugs for Verint Automated Verification, optimizing UI for streamlined policy data views.</li>
+                  <li>Built and optimized CI/CD pipelines for multiple projects within the firm.</li>
+                  <li>Developed a management system using Jira APIs, C#, and Angular, automating release-specific Jira tasks, saving 20% of effort.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        <p id="recruiter">
+          If you're a recruiter looking to get in touch, 
+          <a class="links" href="https://www.linkedin.com/in/1rv" target="_blank">LinkedIn</a>
+          is my preferred platform for professional correspondence.
+        </p>
+
+        <footer id="footer"> Built and designed by Rahul Verma. <br> All rights reserved. © </footer>
+    </div>
+  </body>
+</html>
