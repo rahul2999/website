@@ -4,229 +4,128 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rahul</title>
+    <title>Rahul Verma</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --bg-color: #ffffff;
+            --text-color: #144687;
+            --primary-color: #1a73e8;
+        }
         body {
-            font-family: 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: calc(10px + 0.33vw);
-            padding: 5vh 10vw;
-            color: #09185ab1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            font-size: x-small;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        body.dark {
+            --bg-color: #545454;
+            --text-color: #c7daf2;
         }
         #container {
-            align-content: center;
+            width: clamp(300px, 40%, 800px); /* min 300px, ideal 50%, max 800px */
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
-        /* top right corner icon links bar */
-        #link-icons {
-            float: right;
-        }
-
-        /* intro section */
-        h1 {
-            font-size: 4.5em;
-            font-weight: 500;
-            margin-bottom: 0;
-            color: #09185a;
-        }
-        #rahul {
-            font-weight: 600;
-            color: #1a73e8c9;
-        }
-        #connect-with-me {
-            font-size: 1.5em;
-            padding: 10px 10px;
-            border: 2px solid #001f3f; /* Dark navy outline */
-            background: transparent;
-            color: #001f3f; /* Dark navy text */
-            cursor: pointer;
-            border-radius: 5px; /* Optional: Rounded corners */
-            transition: all 0.3s ease;
-            text-decoration: none;
-            }
-        #intro {
-            display: flex;
-            padding-top: 20px;
-        }
-        #gif {
-            filter: invert();
-            width: 80%;
-            height: auto;
-            object-fit: none;
-        }
-
-        /* about section */
-        #about {
-            margin: 0px 0;
-        }
-        #tech-stack {
-            display: flex;
-            flex-wrap: wrap; /* Allows the items to wrap to the next line */
-            list-style-type: none; /* Removes default bullet points */
-            padding: 0;
-            margin: 0;
-        }
-        #tech-stack li {
+        #header {
+            position: relative;
             display: flex;
             align-items: center;
-            width: 35%;
-            margin: 5px 5px;
-            font-size: 1.3em;
-            padding-left: 35px; /* Space for custom bullet */
-            position: relative;
+            justify-content: center;
         }
-        #tech-stack li:before {
-            content: '🚀'; /* Change to a custom symbol (can be any emoji or character) */
+        #time {
             position: absolute;
             left: 0;
-            font-size: 1.5em;
-            color: #ff6347; /* Cool color like tomato red */
-            top: 50%;
-            transform: translateY(-50%);
+            margin-left: 1rem;
         }
-
-        /* experience section */
-        #experience {
-            margin: 0px 0;
-            justify-content: space-between; /* Space between the two sections */
-            gap: 30px;
+        #rahul-img {
+            width: 90px;
+            height: 100px;
+            border-radius: 40%;
         }
-        .divider {
-            width: 80px;
-            border: 2px solid #1a73e8;
-            margin-bottom: 40px;
-            margin-left: 0;
-            border-radius: 10px;
-        }
-        #experience-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: space-between;
-        }
-        .experience-item {
-            flex: 1;
-            min-width: 300px;
-            background: #f4f7fa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        .experience-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        .role {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #333;
-            padding-bottom: 0;
-        }
-        .company {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #1a73e8;
-            padding-bottom: 0;
-        }
-        .duration {
-            font-size: 1.1em;
-            color: #777;
-        }
-        .technologies {
-            font-size: 1em;
-            color: #555;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul li {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        ul li::before {
-            content: '🔹';
-            margin-right: 10px;
-            font-size: 1.2em;
-            color: #1a73e8;
-        }
-
-        /* certification and conference section */
-        #certification ul, #conference ul {
-            font-size: 1.1em;
-            padding: 20px;
-            border-radius: 8px;
-            background: #f4f7fa;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-            flex: 1; /* Ensures equal width for both sections */
-        }
-       
-         /* recruiter section */
-        #recruiter {
-            padding-top: 20px;
-            font-size: 1em;
-        }
-
-        /* footer section */
-        #footer {
-            color: #09185a;
-            text-align: center;
-            padding-top: 30px;
-            font-size: 1em;
-            position: relative;
-            width: 100%;
-        }
-
-        /* general style */
-        h2 {
-            font-size: 2.2em;
-            color: #09185a;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding-top: 20px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.6em;
-            font-weight: 300;
-            line-height: 1.4;
-            max-width: 50em;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        .links {
-            text-decoration: none;
-            color: #121314;
-            background-color: rgba(0,169,251,0.2);
+        #theme {
+            position: absolute;
+            right: 0;
+            margin-right: 1rem;
+            background: none;
+            border-radius: 10%;
+            cursor: pointer;
         }
         
-        /* style based on screen sizes*/
-        @media (max-width: 900px){
-            #container {
-                flex-wrap: wrap-reverse;
-            }
-            #intro {
-                display: block;
-                width: 100%;
-            }
-            #gif {
-                filter: invert();
-                width: 100%;
-                height: auto;
-                object-fit: scale-down;
-            }
-            .experience-item {
-                flex-direction: column; /* Stack the sections on smaller screens */
-                min-width: 200px;
-            }
+        b {
+            font-weight: bold
+        }
+
+        p {
+            font-size: small;
+            font-weight: 300;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .links {
+            color: var(--text-color);
+        }
+
+        #social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 1rem;
+            gap: 1rem;
+        }
+        #footer {
+            font-size: x-small;
+            padding-top: 2rem;
         }
     </style>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            if (document.body.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        window.onload = function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        };
+    </script>
   </head>
   <body>
     <div id="container">
-        <div id="link-icons">
+        <div id="header">
+            <h2 id="time">Loading time...</h2>
+             <img id="rahul-img" src="rahul.png" alt="rahul image">
+            <button id="theme" onclick="toggleTheme()">🌓</button>
+        </div>
+
+        <div id="intro">
+            <p> Hey! I'm <b>Rahul Verma</b> - Software Engineer @ 
+                <a class="links" href='https://www.jpmorgan.com/global' target="_blank">J.P. Morgan</a>
+            </p>
+            <p>
+                Currently building <a class="links" href='https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/checkout' target="_blank">Checkout</a>
+                at J.P. Morgan, working with technologies like Java, Python, and AWS.
+                I'm passionate about creating large-scale, high-impact products and continuously deepening my expertise—whether through new courses, conferences, or hands-on projects.
+            </p>
+            <p>
+                Outside of work, I stay curious about emerging tech, enjoy watching anime, and love exploring new places through travel.
+            </p>
+        </div>
+
+        <div id="social-icons">
             <a href="https://www.linkedin.com/in/1rv" target="_blank">
                 <img src="LI-In-Bug.png" alt="LinkedIn" height="25" width="30">
             </a>
@@ -235,123 +134,24 @@
             </a>
         </div>
 
-        <div id="intro">
-            <div id="intro-content">
-                <h1> hi, <span id="rahul">rahul</span> here. </h1>
-                <p style="font-weight:500; font-size:2.2em">
-                    I create stuff sometimes.
-                </p>
-                <p>
-                    I am a Software Engineer from London, United Kingdom. 
-                    I'm passionate about building large-scale, high-impact products and have played a key role in launching major features for industry-leading services.
-                </p>
-                
-            </div>
-            <img id="gif" src="random.gif" alt="gif">   
-        </div>
-
-        <div id="about">
-            <h2>/ about me</h2> 
-            <hr class="divider">
-            <p>
-                I am currently a Software Engineer at
-                <a class="links" href='https://www.jpmorgan.com/global' target="_blank">J.P. Morgan</a>, working in the 
-                <a class="links" href='https://developer.payments.jpmorgan.com/docs/commerce/online-payments/capabilities/checkout' target="_blank">Checkout</a> team. 
-                At the same time, I am undertaking a Master of Science in Digital and Technology Solutions at the University of Exeter. 
-            </p>
-            <p> Here are some technologies I have been working with:
-                <ul id="tech-stack">
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>AWS</li>
-                    <li>PostgreSQL</li>
-                    <li>Kubernetes</li>
-                    <li>Docker</li>
-                </ul>
-            </p>
-            <p>
-                Outside of work, I'm passionate about staying up-to-date with the latest technological advancements. 
-                <br> I enjoy watching anime and love exploring new places through travel.
-            </p>
-        </div>
-
-        <div id="experience">
-            <h2>/ experience</h2> 
-            <hr class="divider">
-            <div id="experience-content">
-              <div class="experience-item">
-                <p class="company">J.P. Morgan</p>
-                <p class="role">Senior Associate Software Engineer</p>
-                <p class="duration">Sept 2022 - Present</p>
-                <p class="technologies">Technologies: Java, Spring Boot, gRPC, Gradle, PostgreSQL, AWS, Docker, Kubernetes, DataDog</p>
-                <ul>
-                  <li>Spearheaded the development of a new merchant checkout solution leveraging Java and AWS in a fast-paced environment.</li>
-                  <li>Designed comprehensive architecture diagrams, mapping the end-to-end system flow for the checkout solution.</li>
-                  <li>Collaborated with internal and external stakeholders, including payment method integration teams (PBB).</li>
-                  <li>Engineered and maintained multiple APIs, contributing to an international team spanning the UK and US.</li>
-                </ul>
-              </div>
-              <div class="experience-item">
-                <p class="company">J.P. Morgan</p>
-                <p class="role">Analyst Software Engineer</p>
-                <p class="duration">Jul 2021 - Aug 2022</p>
-                <p class="technologies">Technologies: Java, Spring Boot, Maven, Git, Splunk, OracleDB</p>
-                <ul>
-                  <li>Enhanced and maintained features for a critical internal reference data settlement engine managing millions of records.</li>
-                  <li>Designed and implemented a Grafana Dashboard to visualize app metrics, providing actionable insights for leadership.</li>
-                  <li>Developed Proof of Concepts (POCs) for log aggregation in Splunk, reducing production issue investigation time by 25%.</li>
-                </ul>
-              </div>
-              <div class="experience-item">
-                <p class="company">Verint</p>
-                <p class="role">Software Engineer</p>
-                <p class="duration">Jul 2019 - Jun 2020</p>
-                <p class="technologies">Industrial Placement <br> Technologies: C#, Angular, MongoDB, Bash, PowerShell, Jenkins, Groovy</p>
-                <ul>
-                  <li>Delivered new features and resolved bugs for Verint Automated Verification, optimizing UI for streamlined policy data views.</li>
-                  <li>Built and optimized CI/CD pipelines for multiple projects within the firm.</li>
-                  <li>Developed a management system using Jira APIs, C#, and Angular, automating release-specific Jira tasks, saving 20% of effort.</li>
-                </ul>
-              </div>
-            </div>
-        </div>
-
-
-        <div id="certification">
-            <h2>/ certifications</h2>
-            <hr class="divider">
-            <ul>
-                <li>AWS Developer Associate</li>
-                <li>AWS Solutions Architect Associate</li>
-                <li>AWS Cloud Practitioner</li>
-                <li>Certified Kubernetes Application Developer</li>
-                <li>Certified Kubernetes Administrator</li>
-                <li>Terraform Associate</li>
-                <li>Microsoft Azure Fundamentals</li>
-                <li>Bloomberg Market Concepts</li>
-            </ul>
-        </div>
-
-        <div id="conference">
-            <h2>/ conferences</h2>
-            <hr class="divider">
-            <ul>
-                <li>KubeCon London 2025</li>
-                <li>Temporal London 2025</li>
-                <li>AWS re:Invent Las Vegas 2024</li>
-                <li>AWS Summit London 2023</li>
-                <li>Bright Network 2021</li>
-                <li>ffconf Brighton 2018</li>
-            </ul>
-        </div>
-
-        <p id="recruiter">
-          If you're a recruiter looking to get in touch, 
-          <a class="links" href="https://www.linkedin.com/in/1rv" target="_blank">LinkedIn</a>
-          is my preferred platform for professional correspondence.
-        </p>
-
-        <footer id="footer"> Built and designed by Rahul Verma. <br> All rights reserved. © </footer>
+        <footer id="footer"> © 2025 Rahul Verma </footer>
     </div>
+
+    <script>
+        function updateLondonTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Europe/London',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+            };
+            const timeString = new Intl.DateTimeFormat('en-GB', options).format(now);
+            document.getElementById('time').textContent = `${timeString}`;
+        }
+        updateLondonTime();
+        setInterval(updateLondonTime, 1000);
+  </script>
   </body>
 </html>
