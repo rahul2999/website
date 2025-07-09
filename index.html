@@ -117,6 +117,11 @@
                 document.body.classList.add('dark');
             }
         };
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 't') {
+            toggleTheme();
+            }
+        });
     </script>
   </head>
   <body>
