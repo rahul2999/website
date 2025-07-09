@@ -154,9 +154,11 @@
             </a>
         </div>
 
-        <footer id="footer"> © 2025 Rahul Verma </footer>
+        <footer id="footer"> © <span id="year"></span> Rahul Verma </footer>
     </div>
-
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
     <script>
         function updateLondonTime() {
             const now = new Date();
