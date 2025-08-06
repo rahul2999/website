@@ -72,6 +72,10 @@
             border: none;
             cursor: pointer;
             font-size: xx-large;
+            transition: transform 0.4s ease;
+        }
+        #theme.rotated {
+            transform: rotate(180deg);
         }
         
         b {
@@ -106,15 +110,17 @@
     <script>
         function toggleTheme() {
             document.body.classList.toggle('dark');
-            if (document.body.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            const themeBtn = document.getElementById('theme');
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeBtn.classList.toggle('rotated', isDark);
         }
         window.onload = function() {
-            if (localStorage.getItem('theme') === 'dark') {
+            const theme = localStorage.getItem('theme');
+            const themeBtn = document.getElementById('theme');
+            if (theme === 'dark') {
                 document.body.classList.add('dark');
+                themeBtn.classList.add('rotated');
             }
         };
         document.addEventListener('keydown', (e) => {
@@ -129,7 +135,7 @@
         <div id="header">
             <p id="time">Loading time...</p>
             <img id="rahul-img" src="rahul.png" alt="rahul verma">
-            <button id="theme" onclick="toggleTheme()">🌓</button>
+            <button id="theme" onclick="toggleTheme()">🌗</button>
         </div>
 
         <div id="intro">
